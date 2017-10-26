@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KategoriaA" fx:id="abc">
+   <children>
+      <Button layoutX="125.0" layoutY="523.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="C" fx:id="C" onAction="#goToFinalScene"/>
+      <Button layoutX="557.0" layoutY="409.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="B" fx:id="B" onAction="#goToFinalScene"/>
+      <Button layoutX="125.0" layoutY="409.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="A" fx:id="A" onAction="#goToFinalScene"/>
+      <Text layoutX="233.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="693.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="233.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="125.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="420.13671875">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="212.0" fitWidth="309.0" layoutX="683.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="125.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text layoutX="125.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Które pytanie">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Button fx:id="wrocDoStronyGlownej" layoutX="798.0" layoutY="645.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="53.0" prefWidth="216.0" text="Wróc do strony głównej" />
+   </children>
+</AnchorPane>

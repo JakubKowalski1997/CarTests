@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-image: url('file:5.jpg')" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="342.0" prefWidth="159.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="katA" mnemonicParsing="false" onAction="#handleButtonClickA" onMouseEntered="#setShadowA" onMouseExited="#setNotShadowA" prefHeight="51.0" prefWidth="163.0" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Kategoria A">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Button fx:id="katB" mnemonicParsing="false" prefHeight="51.0" prefWidth="163.0" onMouseEntered="#setShadowB" onMouseExited="#setNotShadowB" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Kategoria B" translateY="20.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="katC" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="164.0" onMouseEntered="#setShadowC" onMouseExited="#setNotShadowC" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Kategoria C" translateY="40.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="katD" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="164.0" onMouseEntered="#setShadowD" onMouseExited="#setNotShadowD" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Kategoria D" translateY="60.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="katT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="165.0" onMouseMoved="#setShadowT" onMouseExited="#setNotShadowT" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Kategoria T" translateY="80.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="180.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="52.0" prefWidth="1080.0" />
+            <HBox prefHeight="38.0" prefWidth="1080.0">
+               <children>
+                  <Text fill="#403838cb" strokeType="OUTSIDE" strokeWidth="0.0" text="Testy na prawo jazdy - oficjalne pytania egzaminacyjne" textAlignment="CENTER" wrappingWidth="1081.0703125">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Text fill="#403838cd" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz swoją kategorię" textAlignment="CENTER" wrappingWidth="1073.28125">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
