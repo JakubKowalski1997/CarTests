@@ -4,10 +4,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="TakNie" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KategoriaA">
-   <children>
-      <Text layoutX="230.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Button fx:id="Tak" layoutX="261.0" layoutY="400.0" mnemonicParsing="false" onAction="#goToNextQuestion" text="Tak" />
-      <Button fx:id="Nie" layoutX="656.0" layoutY="400.0" mnemonicParsing="false" onAction="#goToNextQuestion" text="Nie" />
-   </children>
+<AnchorPane fx:id="TakNie" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.112"
+            style="-fx-background-image: url('file:5.jpg')" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.KategoriaA">
+    <children>
+        <Text layoutX="230.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+        <Button fx:id="Tak" layoutX="261.0" layoutY="400.0" mnemonicParsing="false" onMouseEntered="#setShadowTak"
+                onMouseExited="#setNotShadowTak"
+                style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; "
+                onAction="#goToNextQuestion" text="Tak"/>
+        <Button fx:id="Nie" layoutX="656.0" layoutY="400.0" mnemonicParsing="false" onMouseEntered="#setShadowNie"
+                onMouseExited="#setNotShadowNie"
+                style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; "
+                onAction="#goToNextQuestion" text="Nie"/>
+    </children>
 </AnchorPane>

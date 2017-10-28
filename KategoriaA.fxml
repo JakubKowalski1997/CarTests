@@ -6,42 +6,65 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KategoriaA" fx:id="abc">
-   <children>
-      <Button layoutX="125.0" layoutY="523.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="C" fx:id="C" onAction="#goToFinalScene"/>
-      <Button layoutX="557.0" layoutY="409.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="B" fx:id="B" onAction="#goToFinalScene"/>
-      <Button layoutX="125.0" layoutY="409.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="A" fx:id="A" onAction="#goToFinalScene"/>
-      <Text layoutX="233.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Text layoutX="693.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Text layoutX="233.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Text layoutX="125.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="420.13671875">
-         <font>
-            <Font size="40.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="212.0" fitWidth="309.0" layoutX="683.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" />
-      <Text layoutX="125.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Text>
-      <Text layoutX="125.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Które pytanie">
-         <font>
-            <Font size="27.0" />
-         </font>
-      </Text>
-      <Button fx:id="wrocDoStronyGlownej" layoutX="798.0" layoutY="645.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="53.0" prefWidth="216.0" text="Wróc do strony głównej" />
-   </children>
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-image: url('file:5.jpg')"
+            xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.KategoriaA" fx:id="abc">
+    <children>
+        <Button layoutX="125.0" layoutY="523.0" mnemonicParsing="false" prefHeight="77.0" onMouseEntered="#setShadowCAnswer"
+                onMouseExited="#setNotShadowCAnswer"
+                style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; "
+                prefWidth="84.0" text="C"
+                fx:id="C" onAction="#goToFinalScene"/>
+        <Button layoutX="557.0" layoutY="409.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" onMouseEntered="#setShadowBAnswer"
+                onMouseExited="#setNotShadowBAnswer"
+                style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; "
+                text="B"
+                fx:id="B" onAction="#goToFinalScene"/>
+        <Button layoutX="125.0" layoutY="409.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" onMouseEntered="#setShadowAAnswer"
+                onMouseExited="#setNotShadowAAnswer"
+                style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; "
+                text="A"
+                fx:id="A" onAction="#goToFinalScene"/>
+        <Text layoutX="233.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+              wrappingWidth="262.13671875">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text layoutX="693.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+              wrappingWidth="262.13671875">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text layoutX="233.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+              wrappingWidth="262.13671875">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text layoutX="125.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+              wrappingWidth="420.13671875">
+            <font>
+                <Font size="40.0"/>
+            </font>
+        </Text>
+        <ImageView fitHeight="212.0" fitWidth="309.0" layoutX="683.0" layoutY="78.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+        <Text layoutX="125.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas">
+            <font>
+                <Font size="31.0"/>
+            </font>
+        </Text>
+        <Text layoutX="125.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Które pytanie">
+            <font>
+                <Font size="27.0"/>
+            </font>
+        </Text>
+        <Button fx:id="wrocDoStronyGlownej" layoutX="798.0" layoutY="645.0" mnemonicParsing="false"
+                onAction="#backToMain" prefHeight="53.0" prefWidth="216.0" onMouseEntered="#setShadowBack"
+                onMouseExited="#setNotShadowBack"
+                style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; "
+                text="Wróc do strony głównej"/>
+    </children>
 </AnchorPane>

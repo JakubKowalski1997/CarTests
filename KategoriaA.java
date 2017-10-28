@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sun.security.timestamp.TSRequest;
@@ -13,14 +14,21 @@ import java.io.IOException;
 import java.util.stream.IntStream;
 
 /**
- * Created by Jakub Kowalski on 21.10.2017.
+ * @author Jakub Kowalski
  */
 public class KategoriaA {
     public Button wrocDoStronyGlownej;
     @FXML
     public Button Tak;
     @FXML
+    public Button Nie;
+    @FXML
     public Button A;
+    @FXML
+    public Button B;
+    @FXML
+    public Button C;
+    DropShadow shadow = new DropShadow();
 
     private static Integer i = 0;
 
@@ -31,12 +39,10 @@ public class KategoriaA {
         System.out.println(i);
         stage = (Stage) Tak.getScene().getWindow();
         //load up OTHER FXML document
-        if(i>=5)
-        {
+        if (i >= 5) {
             root = FXMLLoader.load(getClass().getResource("KategoriaA.fxml"));
             i++;
-        } else
-        {
+        } else {
             root = FXMLLoader.load(getClass().getResource("KategoriaATakNie.fxml"));
             i++;
         }
@@ -44,8 +50,7 @@ public class KategoriaA {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-    }
+    }// just go to next question(future need to store the answers and sum up also need to random choose questions form poul)
 
     public void goToFinalScene() throws IOException {
         Stage stage;
@@ -53,13 +58,11 @@ public class KategoriaA {
 
         System.out.println(i);
         stage = (Stage) A.getScene().getWindow();
-        //load up OTHER FXML document
-        if(i>=10)
-        {
+
+        if (i >= 10) {
             root = FXMLLoader.load(getClass().getResource("FinalScene.fxml"));
             i++;
-        } else
-        {
+        } else {
             root = FXMLLoader.load(getClass().getResource("KategoriaA.fxml"));
             i++;
         }
@@ -68,7 +71,7 @@ public class KategoriaA {
         stage.setScene(scene);
         stage.show();
 
-    }
+    }// this function making when program is going to be ended (future need to sum up all points)
 
     public void backToMain() throws IOException {
         Stage stage;
@@ -82,5 +85,54 @@ public class KategoriaA {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }// go back to main scene
+
+
+    public void setShadowBack() {
+        wrocDoStronyGlownej.setEffect(shadow);
+    }
+
+    public void setNotShadowBack() {
+        wrocDoStronyGlownej.setEffect(null);
+    }
+
+    public void setShadowAAnswer() {
+        A.setEffect(shadow);
+    }
+
+    public void setNotShadowAAnswer() {
+        A.setEffect(null);
+    }
+
+    public void setShadowBAnswer() {
+        B.setEffect(shadow);
+    }
+
+    public void setNotShadowBAnswer() {
+        B.setEffect(null);
+    }
+
+    public void setShadowCAnswer() {
+        C.setEffect(shadow);
+    }
+
+    public void setNotShadowCAnswer() {
+        C.setEffect(null);
+    }
+
+    public void setShadowTak() {
+        Tak.setEffect(shadow);
+    }
+
+    public void setNotShadowTak() {
+        Tak.setEffect(null);
+    }
+
+    public void setShadowNie() {
+        Nie.setEffect(shadow);
+    }
+
+    public void setNotShadowNie() {
+        Nie.setEffect(null);
     }
 }

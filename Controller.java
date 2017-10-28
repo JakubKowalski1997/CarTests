@@ -14,71 +14,64 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 
-public class Controller extends Main{
-public Button katA;
-public Button katB;
-public Button katC;
-public Button katD;
-public Button katT;
+public class Controller extends Main {
+    public Button katA;
+    public Button katB;
+    public Button katC;
+    public Button katD;
+    public Button katT;
     DropShadow shadow = new DropShadow();
 
 
     public void handleButtonClickA() throws IOException {
         Stage stage;
         Parent root;
-            stage = (Stage) katA.getScene().getWindow();
-            //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("KategoriaATakNie.fxml"));
-            //create a new scene with root and set the stage
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        stage = (Stage) katA.getScene().getWindow();
+        //load up OTHER FXML document
+        root = FXMLLoader.load(getClass().getResource("KategoriaATakNie.fxml"));
+        //create a new scene with root and set the stage
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void setShadowA()
-    {
+    public void setShadowA() {
         katA.setEffect(shadow);
-    }public void setNotShadowA()
-    {
+    }
+
+    public void setNotShadowA() {
         katA.setEffect(null);
     }
 
-    public void setShadowB()
-    {
+    public void setShadowB() {
         katB.setEffect(shadow);
     }
 
-public void setNotShadowB()
-{
-    katB.setEffect(null);
-}
+    public void setNotShadowB() {
+        katB.setEffect(null);
+    }
 
-    public void setShadowC()
-    {
+    public void setShadowC() {
         katC.setEffect(shadow);
     }
 
-public void setNotShadowC()
-        {
+    public void setNotShadowC() {
         katC.setEffect(null);
-        }
-    public void setShadowD()
-    {
+    }
+
+    public void setShadowD() {
         katD.setEffect(shadow);
     }
 
-    public void setNotShadowD()
-    {
+    public void setNotShadowD() {
         katD.setEffect(null);
     }
 
-    public void setShadowT()
-    {
+    public void setShadowT() {
         katT.setEffect(shadow);
     }
 
-    public void setNotShadowT()
-    {
+    public void setNotShadowT() {
         katT.setEffect(null);
     }
 
