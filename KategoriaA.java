@@ -7,16 +7,23 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import sun.security.timestamp.TSRequest;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.Random;
+import java.util.Scanner;
 import java.util.stream.IntStream;
 
 /**
  * @author Jakub Kowalski
  */
 public class KategoriaA {
+
+
+    public Text question;
+    @FXML
     public Button wrocDoStronyGlownej;
     @FXML
     public Button Tak;
@@ -32,12 +39,17 @@ public class KategoriaA {
 
     private static Integer i = 0;
 
+
+    public KategoriaA() throws FileNotFoundException {
+    }
+
     public void goToNextQuestion() throws IOException {
         Stage stage;
         Parent root;
 
         System.out.println(i);
         stage = (Stage) Tak.getScene().getWindow();
+
         //load up OTHER FXML document
         if (i >= 5) {
             root = FXMLLoader.load(getClass().getResource("KategoriaA.fxml"));
@@ -50,6 +62,7 @@ public class KategoriaA {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        System.out.println("I wynosi:" + i);
     }// just go to next question(future need to store the answers and sum up also need to random choose questions form poul)
 
     public void goToFinalScene() throws IOException {
@@ -85,6 +98,8 @@ public class KategoriaA {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        i = i - 5;
+        System.out.println("I wynosi:" + i);
     }// go back to main scene
 
 
@@ -135,4 +150,5 @@ public class KategoriaA {
     public void setNotShadowNie() {
         Nie.setEffect(null);
     }
+
 }

@@ -4,10 +4,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
+<?import sample.TakNieAQuestion?>
 <AnchorPane fx:id="TakNie" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-image: url('file:5.jpg');" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KategoriaA">
     <children>
-        <Text layoutX="230.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <TakNieAQuestion fx:id="question" fill="#f8f7f7" layoutX="230.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 20pt;  -fx-font-weight:bold;  " />
         <Button fx:id="Tak" layoutX="261.0" layoutY="400.0" mnemonicParsing="false" onAction="#goToNextQuestion" onMouseEntered="#setShadowTak" onMouseExited="#setNotShadowTak" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Tak" />
         <Button fx:id="Nie" layoutX="656.0" layoutY="400.0" mnemonicParsing="false" onAction="#goToNextQuestion" onMouseEntered="#setShadowNie" onMouseExited="#setNotShadowNie" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Nie" />
+      <Button fx:id="wrocDoStronyGlownej" layoutX="798.0" layoutY="645.0" mnemonicParsing="false" onAction="#backToMain" onMouseEntered="#setShadowBack" onMouseExited="#setNotShadowBack" prefHeight="53.0" prefWidth="216.0" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 12pt;  -fx-font-weight:bold; -fx-background-color: #00AFD1; " text="Wróc do strony głównej" />
     </children>
 </AnchorPane>
