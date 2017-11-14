@@ -47,7 +47,6 @@ public class KategoriaA {
         Stage stage;
         Parent root;
 
-        System.out.println(i);
         stage = (Stage) Tak.getScene().getWindow();
 
         //load up OTHER FXML document
@@ -62,7 +61,6 @@ public class KategoriaA {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        System.out.println("I wynosi:" + i);
     }// just go to next question(future need to store the answers and sum up also need to random choose questions form poul)
 
     public void goToFinalScene() throws IOException {
@@ -99,7 +97,7 @@ public class KategoriaA {
         stage.setScene(scene);
         stage.show();
         i = i - 5;
-        System.out.println("I wynosi:" + i);
+
     }// go back to main scene
 
 
