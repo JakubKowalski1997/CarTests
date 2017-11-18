@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,9 +12,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import sun.security.timestamp.TSRequest;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.stream.IntStream;
 
 /**
@@ -39,8 +43,56 @@ public class KategoriaA {
 
     private static Integer i = 0;
 
+    public static int timer;
 
     public KategoriaA() throws FileNotFoundException {
+
+        /*Thread system_message_thread = new Thread(new Runnable() {
+
+            public void run() {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException ex) {
+                }
+                Platform.runLater(new Runnable() {
+                    public void run() {
+                        System.out.println(i);
+                        try {
+                            while(i<=4)
+                                goToNextQuestion();
+
+                            while(i>=5 && i<=10)
+                                goToFinalScene();
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
+        system_message_thread.start();*/
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        while(i<=4){
+                            try {
+                                goToNextQuestion();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }}
+
+                        while(i>=5 && i<=10){
+                            try {
+                                goToFinalScene();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }}
+                    }
+                },
+                5000
+        );
     }
 
     public void goToNextQuestion() throws IOException {
@@ -96,7 +148,7 @@ public class KategoriaA {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        i = i - 5;
+        i = 0;
 
     }// go back to main scene
 

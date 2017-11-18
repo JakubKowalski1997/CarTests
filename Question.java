@@ -71,7 +71,6 @@ public class Question {
 
     private String quest() throws IOException {
         String q = randomQuestionTakNieA("question");
-        System.out.println(q);
         return q;
     }
 

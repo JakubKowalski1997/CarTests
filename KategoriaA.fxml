@@ -6,6 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import sample.TakNieAQuestion?>
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-image: url('file:5.jpg')"
             xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.KategoriaA" fx:id="abc">
@@ -43,12 +44,12 @@
                 <Font size="24.0"/>
             </font>
         </Text>
-        <Text layoutX="125.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+        <TakNieAQuestion  fx:id="question" fill="#f8f7f7" layoutX="230.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-focus-color: transparent; -fx-background-radius: 5em; -fx-background-color:white;   -fx-text-fill:white;  -fx-font-size: 20pt;  -fx-font-weight:bold;  "
               wrappingWidth="420.13671875">
             <font>
                 <Font size="40.0"/>
             </font>
-        </Text>
+        </TakNieAQuestion>
         <ImageView fitHeight="212.0" fitWidth="309.0" layoutX="683.0" layoutY="78.0" pickOnBounds="true"
                    preserveRatio="true"/>
         <Text layoutX="125.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas">
